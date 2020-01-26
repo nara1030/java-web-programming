@@ -49,7 +49,7 @@
 * 기존 C/S 환경  
 	<img src="../img/ch_1_09.jpg" width="300" height="150"></br>
 * 웹 환경  
-	<img src="../img/ch_1_10.jpg" width="300" height="200"></br>
+	<img src="../img/ch_1_10.jpg" width="300" height="150"></br>
 
 웹 환경에서는 웹 브라우저와 웹 서버가 네트워크 및 멀티 스레드 프로그래밍을 해주기 때문에 개발자는 단지 어떤 업무를 처리하고 무엇을 출력할 것인가에 대해서만 고민하면 된다.
 
