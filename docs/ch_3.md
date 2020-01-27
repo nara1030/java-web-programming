@@ -67,7 +67,7 @@ p132-142
 ##### [목차로 이동](#목차)
 
 ### Servlet 클래스 계층도
-지금까지는 서블릿 클래스를 만들 때 Servlet 인터페이스를 구현했다(∵ 서블릿 컨테이너는 Servlet 규칙에 정의된 메서드를 호출하기 때문에, 서블릿 객체는 반드시 Servlet 인터페이스를 구현해야 한다). 따라서 우리는 서블릿을 만들 때마다 Servlet 인터페이스에 선언된 다섯 개의 메서드를 모두 구현하였다. 하지만 이 메서드 중 반드시 구현해야 하는 메서드는 service() 뿐이다. 서블릿을 만들 때 Servlet 인터페이스 대신 GenericServlet 추상 클래스를 상속받는다면 Servlet 인터페이스 중에서 service()만 구현하면 된다. 따라서 Servlet 인터페이스를 직접 구현하던 때보다 코드가 훨씬 간결해진다. 한편 GenericServlet 클래스 대신 HttpServlet 클래스를 상속받을 수도 있다. HttpServlet 클래스는 GenericServlet 클래스의 하위 클래스이므로 HttpServlet을 상속받으면 GenericServlet과 마찬가지로 javax.servlet.Servlet 인터페이스를 구현한 것이 된다. HttpServlet은 GenericServlet과 달리 service() 메서드를 직접 구현한다기보다는 클라이언트의 요청 방식에 따라 doXXX() 메서드를 오버라이딩한다.
+지금까지는 서블릿 클래스를 만들 때 Servlet 인터페이스를 구현했다(∵ 서블릿 컨테이너는 Servlet 규칙에 정의된 메서드를 호출하기 때문에, 서블릿 객체는 반드시 Servlet 인터페이스를 구현해야 한다). 따라서 우리는 서블릿을 만들 때마다 Servlet 인터페이스에 선언된 다섯 개의 메서드를 모두 구현하였다. 하지만 이 메서드 중 반드시 구현해야 하는 메서드는 service() 뿐이다. 서블릿을 만들 때 Servlet 인터페이스 대신 GenericServlet 추상 클래스를 상속받는다면 Servlet 인터페이스 중에서 service()만 구현하면 된다. 따라서 Servlet 인터페이스를 직접 구현하던 때보다 코드가 훨씬 간결해진다(인터페이스와 추상클래스의 쓰임 차이에 대해 생각해볼 수 있다). 한편 GenericServlet 클래스 대신 HttpServlet 클래스를 상속받을 수도 있다. HttpServlet 클래스는 GenericServlet 클래스의 하위 클래스이므로 HttpServlet을 상속받으면 GenericServlet과 마찬가지로 javax.servlet.Servlet 인터페이스를 구현한 것이 된다. HttpServlet은 GenericServlet과 달리 service() 메서드를 직접 구현한다기보다는 클라이언트의 요청 방식에 따라 doXXX() 메서드를 오버라이딩한다.
 
 * HttpServlet의 클래스 계층도  
 	<img src="../img/ch_3_04.jpg" width="300" height="250"></br>
