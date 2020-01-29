@@ -1,10 +1,14 @@
 3단원. 서블릿 프로그래밍
 =====
+좀 더 자세한 내용은 [톰캣 최종분석(2005)](https://github.com/nara1030/TIL/blob/master/docs/book/how_tomcat_works/README.md)으로 공부한다.
+- - -
 ## 목차
 1. [요약](#요약)
 2. [참고](#참고)
 	* [웹 애플리케이션 배치](#웹-애플리케이션-배치)
 	* [Servlet 클래스 계층도](#Servlet-클래스-계층도)
+	* [서블릿과 예외처리](#서블릿과-예외처리)
+	* [서블릿과 멀티 스레드](#서블릿과-멀티-스레드)
 
 ## 요약
 이번 장에서는 자바로 웹 애플리케이션을 만드는 방법에 대해 언급한다.
@@ -75,5 +79,19 @@ p132-142
 	<img src="../img/ch_3_05.jpg" width="150" height="250"></br>
 	* 클라이언트의 요청이 들어오면, 첫째로 상속받은 HttpServlet의 service() 메서드 호출
 	* 둘째로 service()는 클라이언트 요청 방식에 따라 doGet(), doPost(), doPut() 등의 메서드 호출
+
+##### [목차로 이동](#목차)
+
+### 서블릿과 예외처리
+> * void init(ServletConfig config) throws ServletException {}
+> * void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {}
+
+
+##### [목차로 이동](#목차)
+
+### 서블릿과 멀티 스레드
+서블릿 컨테이너는 요청 시마다 새로운 스레드에서 service() 메서드를 실행한다. 따라서 수많은 클라이언트의 요청에 대해 지체없이 응답을 할 수 있지만 서블릿에서 공유되는 자원(파일이나 네트워크 커넥션, static/인스턴스 변수)은 문제가 발생할 수 있다.
+
+* [서블릿 기초](https://cofs.tistory.com/48)
 
 ##### [목차로 이동](#목차)
